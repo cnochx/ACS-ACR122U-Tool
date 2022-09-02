@@ -1,1 +1,3 @@
 pyscard
+smartcard~=0.3
+pydeen~=0.7.0

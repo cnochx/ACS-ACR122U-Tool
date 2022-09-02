@@ -1,0 +1,6 @@
+2022-09-02 11:16:58,021: INFO - root - PyDEEN logger initialized
+2022-09-02 11:16:58,022: ERROR - pydeeen.AuthBasic - Error while loading config: <class 'FileNotFoundError'> - [Errno 2] No such file or directory: 'S4D100.auth'
+2022-09-02 11:27:17,450: INFO - root - PyDEEN logger initialized
+2022-09-02 11:27:17,451: ERROR - pydeeen.AuthBasic - Error while loading config: <class 'FileNotFoundError'> - [Errno 2] No such file or directory: 'S4D100.auth'
+2022-09-02 11:29:11,123: INFO - root - PyDEEN logger initialized
+2022-09-02 11:29:11,124: ERROR - pydeeen.AuthBasic - Error while loading config: <class 'FileNotFoundError'> - [Errno 2] No such file or directory: 'S4D100.auth'

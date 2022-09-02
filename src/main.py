@@ -1,7 +1,8 @@
-from src import nfc
+
 
 # script Jörg
 
+from src import nfc
 from pydeen.auth import AuthBasic
 from pydeen.http import HTTPConnector, HTTPBackend
 from pydeen.service import ServiceCommand, ServiceContext
@@ -17,10 +18,9 @@ sap_url = "ws://10.17.1.12/extern/api/atbrtc?sap-client=100"
 # define call back command
 class MyCommand(ServiceCommand):
     def handle(self, command, payload, service) -> bool:
-        print(f"MY COMMAND CALLED: payload {payload}")
         reader = nfc.Reader()
-        reader.print_data(reader.get_uid())
-        reader.info()
+        payload = reader.print_data(reader.get_uid())
+        print(f"MY COMMAND CALLED: payload {payload}")
         return True
 
 
@@ -31,7 +31,7 @@ if not auth.load_config(auth.get_menu_filename()):
     auth.menu()
 
 # init sap backend
-backend = HTTPBackend(sap_name, sap_url)
+backend = HTTPBackend(sap_name, sap_url, auth=auth)
 connector = HTTPConnector(backend)
 service = WebSocketService(backend)
 
